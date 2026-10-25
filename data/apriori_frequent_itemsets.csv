@@ -1,0 +1,98 @@
+support,itemsets,length
+0.9661,No_Machine_Failure,1
+0.6,Type_L,1
+0.5765,"No_Machine_Failure, Type_L",2
+0.4992,High_Rotational_Speed,1
+0.4973,High_Torque,1
+0.4972,High_Tool_Wear,1
+0.4932,"High_Rotational_Speed, No_Machine_Failure",2
+0.4883,High_Air_Temperature,1
+0.4777,High_Process_Temperature,1
+0.4747,"High_Tool_Wear, No_Machine_Failure",2
+0.4696,"High_Torque, No_Machine_Failure",2
+0.4654,"High_Air_Temperature, No_Machine_Failure",2
+0.4569,"High_Process_Temperature, No_Machine_Failure",2
+0.4155,"High_Air_Temperature, High_Process_Temperature",2
+0.3961,"High_Air_Temperature, High_Process_Temperature, No_Machine_Failure",3
+0.3012,"High_Tool_Wear, Type_L",2
+0.3002,"High_Rotational_Speed, Type_L",2
+0.2997,Type_M,1
+0.2965,"High_Rotational_Speed, No_Machine_Failure, Type_L",3
+0.2959,"High_Torque, Type_L",2
+0.2938,"High_Air_Temperature, Type_L",2
+0.2915,"High_Process_Temperature, Type_L",2
+0.2914,"No_Machine_Failure, Type_M",2
+0.285,"High_Tool_Wear, No_Machine_Failure, Type_L",3
+0.2788,"High_Air_Temperature, No_Machine_Failure, Type_L",3
+0.277,"High_Process_Temperature, No_Machine_Failure, Type_L",3
+0.2762,"High_Torque, No_Machine_Failure, Type_L",3
+0.2526,"High_Air_Temperature, High_Process_Temperature, Type_L",3
+0.2497,"High_Rotational_Speed, High_Tool_Wear",2
+0.2465,"High_Tool_Wear, High_Torque",2
+0.2455,"High_Rotational_Speed, High_Tool_Wear, No_Machine_Failure",3
+0.2447,"High_Air_Temperature, High_Rotational_Speed",2
+0.2436,"High_Air_Temperature, High_Tool_Wear",2
+0.2433,"High_Process_Temperature, High_Rotational_Speed",2
+0.2417,"High_Air_Temperature, High_Torque",2
+0.2415,"High_Air_Temperature, High_Rotational_Speed, No_Machine_Failure",3
+0.24,"High_Process_Temperature, High_Rotational_Speed, No_Machine_Failure",3
+0.2393,"High_Air_Temperature, High_Process_Temperature, No_Machine_Failure, Type_L",4
+0.2366,"High_Process_Temperature, High_Tool_Wear",2
+0.2333,"High_Process_Temperature, High_Torque",2
+0.2296,"High_Air_Temperature, High_Tool_Wear, No_Machine_Failure",3
+0.2284,"High_Tool_Wear, High_Torque, No_Machine_Failure",3
+0.224,"High_Process_Temperature, High_Tool_Wear, No_Machine_Failure",3
+0.2221,"High_Air_Temperature, High_Torque, No_Machine_Failure",3
+0.2159,"High_Process_Temperature, High_Torque, No_Machine_Failure",3
+0.21,"High_Air_Temperature, High_Process_Temperature, High_Rotational_Speed",3
+0.2072,"High_Air_Temperature, High_Process_Temperature, High_Rotational_Speed, No_Machine_Failure",4
+0.2043,"High_Air_Temperature, High_Process_Temperature, High_Torque",3
+0.2037,"High_Air_Temperature, High_Process_Temperature, High_Tool_Wear",3
+0.1922,"High_Air_Temperature, High_Process_Temperature, High_Tool_Wear, No_Machine_Failure",4
+0.1878,"High_Air_Temperature, High_Process_Temperature, High_Torque, No_Machine_Failure",4
+0.1503,"High_Torque, Type_M",2
+0.1501,"High_Rotational_Speed, High_Tool_Wear, Type_L",3
+0.1498,"High_Rotational_Speed, Type_M",2
+0.1495,"High_Tool_Wear, High_Torque, Type_L",3
+0.1486,"High_Air_Temperature, Type_M",2
+0.1483,"High_Air_Temperature, High_Tool_Wear, Type_L",3
+0.1479,"High_Rotational_Speed, No_Machine_Failure, Type_M",3
+0.1473,"High_Rotational_Speed, High_Tool_Wear, No_Machine_Failure, Type_L",4
+0.1469,"High_Process_Temperature, High_Rotational_Speed, Type_L",3
+0.1467,"High_Air_Temperature, High_Rotational_Speed, Type_L",3
+0.1466,"High_Tool_Wear, Type_M",2
+0.1464,"High_Process_Temperature, High_Tool_Wear, Type_L",3
+0.1461,"High_Air_Temperature, High_Torque, Type_L",3
+0.1451,"High_Air_Temperature, High_Rotational_Speed, No_Machine_Failure, Type_L",4
+0.145,"High_Process_Temperature, High_Rotational_Speed, No_Machine_Failure, Type_L",4
+0.144,"High_Torque, No_Machine_Failure, Type_M",3
+0.1428,"High_Process_Temperature, High_Torque, Type_L",3
+0.1424,"High_Process_Temperature, Type_M",2
+0.1424,"High_Air_Temperature, No_Machine_Failure, Type_M",3
+0.1416,"High_Tool_Wear, No_Machine_Failure, Type_M",3
+0.139,"High_Air_Temperature, High_Tool_Wear, No_Machine_Failure, Type_L",4
+0.1375,"High_Process_Temperature, High_Tool_Wear, No_Machine_Failure, Type_L",4
+0.1372,"High_Process_Temperature, No_Machine_Failure, Type_M",3
+0.1362,"High_Tool_Wear, High_Torque, No_Machine_Failure, Type_L",4
+0.1328,"High_Air_Temperature, High_Torque, No_Machine_Failure, Type_L",4
+0.1303,"High_Process_Temperature, High_Torque, No_Machine_Failure, Type_L",4
+0.1267,"High_Air_Temperature, High_Process_Temperature, High_Rotational_Speed, Type_L",4
+0.1254,"High_Air_Temperature, High_Process_Temperature, High_Tool_Wear, Type_L",4
+0.1252,"High_Air_Temperature, High_Process_Temperature, High_Rotational_Speed, No_Machine_Failure, Type_L",5
+0.125,"High_Air_Temperature, High_Process_Temperature, Type_M",3
+0.1246,"High_Air_Temperature, High_Process_Temperature, High_Torque, Type_L",4
+0.1232,"High_Process_Temperature, High_Rotational_Speed, High_Tool_Wear",3
+0.1224,"High_Air_Temperature, High_Rotational_Speed, High_Tool_Wear",3
+0.1211,"High_Process_Temperature, High_Rotational_Speed, High_Tool_Wear, No_Machine_Failure",4
+0.1207,"High_Air_Temperature, High_Tool_Wear, High_Torque",3
+0.1204,"High_Air_Temperature, High_Rotational_Speed, High_Tool_Wear, No_Machine_Failure",4
+0.12,"High_Air_Temperature, High_Process_Temperature, No_Machine_Failure, Type_M",4
+0.1174,"High_Air_Temperature, High_Process_Temperature, High_Tool_Wear, No_Machine_Failure, Type_L",5
+0.1138,"High_Process_Temperature, High_Tool_Wear, High_Torque",3
+0.1129,"High_Air_Temperature, High_Process_Temperature, High_Torque, No_Machine_Failure, Type_L",5
+0.1088,"High_Air_Temperature, High_Tool_Wear, High_Torque, No_Machine_Failure",4
+0.1042,"High_Air_Temperature, High_Process_Temperature, High_Rotational_Speed, High_Tool_Wear",4
+0.1034,"High_Process_Temperature, High_Tool_Wear, High_Torque, No_Machine_Failure",4
+0.1025,"High_Air_Temperature, High_Process_Temperature, High_Rotational_Speed, High_Tool_Wear, No_Machine_Failure",5
+0.1003,Type_H,1
+0.1001,"High_Air_Temperature, High_Process_Temperature, High_Tool_Wear, High_Torque",4
