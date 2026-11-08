@@ -1,79 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnostic Assessment Result</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #f8fafc; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 30px 20px; }
-        .card { background: #ffffff; color: #0f172a; border-radius: 16px; width: 100%; max-width: 600px; padding: 40px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); text-align: center; }
-        
-        .badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; margin-bottom: 15px; }
-        .badge.success { background: #dcfce7; color: #15803d; }
-        .badge.warning { background: #fef9c3; color: #a16207; }
-        .badge.danger { background: #fee2e2; color: #b91c1c; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnostic Results</title>
+  <style>
+    :root {
+      --primary: #1e293b;
+      --accent: #2563eb;
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --card-bg: #ffffff;
+      --text-muted: #64748b;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+      --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+      --success-text: #15803d;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --danger-text: #b91c1c;
+    }
 
-        h2 { font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 25px; }
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
 
-        /* Metric Gauge Meter */
-        .gauge-container { position: relative; margin: 20px auto; width: 180px; height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background: #f8fafc; border: 8px solid #f1f5f9; }
-        .gauge-container.success { border-color: #22c55e; }
-        .gauge-container.warning { border-color: #eab308; }
-        .gauge-container.danger { border-color: #ef4444; }
-        
-        .gauge-value { font-size: 2.5rem; font-weight: 800; color: #0f172a; line-height: 1; }
-        .gauge-label { font-size: 0.8rem; color: #64748b; font-weight: 600; margin-top: 4px; text-transform: uppercase; }
+    body {
+      background: var(--bg-gradient);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
 
-        .advice-box { background: #f8fafc; border-left: 4px solid #2563eb; padding: 16px; border-radius: 8px; text-align: left; margin: 25px 0; font-size: 0.95rem; color: #334155; line-height: 1.5; }
-        .advice-box strong { color: #0f172a; }
+    .container {
+      width: 100%;
+      max-width: 550px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 2.5rem;
+      text-align: center;
+    }
 
-        .telemetry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; background: #f1f5f9; padding: 15px; border-radius: 10px; }
-        .telemetry-item h4 { font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-bottom: 2px; }
-        .telemetry-item p { font-size: 1rem; font-weight: 700; color: #0f172a; }
+    .header {
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 1rem;
+    }
 
-        .btn-group { display: flex; gap: 12px; justify-content: center; }
-        .btn { flex: 1; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.2s ease; }
-        .btn-primary { background: #2563eb; color: #ffffff; }
-        .btn-primary:hover { background: #1d4ed8; }
-        .btn-secondary { background: #f1f5f9; color: #475569; }
-        .btn-secondary:hover { background: #e2e8f0; color: #0f172a; }
-    </style>
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .result-box {
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+    }
+
+    .result-box.normal {
+      background: var(--success-bg);
+      border: 2px solid var(--success-border);
+      color: var(--success-text);
+    }
+
+    .result-box.failure {
+      background: var(--danger-bg);
+      border: 2px solid var(--danger-border);
+      color: var(--danger-text);
+    }
+
+    .result-box h2 {
+      font-size: 1.4rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .result-box p {
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border: 1.5px solid var(--accent);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-back:hover {
+      background: var(--accent);
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <span class="badge {{ status_class }}">{{ emoji }} {{ badge_text }}</span>
-        <h2>{{ status_title }}</h2>
 
-        <div class="gauge-container {{ status_class }}">
-            <div class="gauge-value">{{ probability }}%</div>
-            <div class="gauge-label">Failure Risk</div>
-        </div>
-
-        <div class="telemetry-grid">
-            <div class="telemetry-item">
-                <h4>Torque</h4>
-                <p>{{ torque }} Nm</p>
-            </div>
-            <div class="telemetry-item">
-                <h4>Speed</h4>
-                <p>{{ speed }} RPM</p>
-            </div>
-            <div class="telemetry-item">
-                <h4>Tool Wear</h4>
-                <p>{{ tool_wear }} min</p>
-            </div>
-        </div>
-
-        <div class="advice-box">
-            <strong>🤖 AI Engineering Recommendation:</strong><br>
-            {{ advice }}
-        </div>
-
-        <div class="btn-group">
-            <a href="/predict" class="btn btn-primary">Evaluate Another</a>
-            <a href="/" class="btn btn-secondary">Dashboard</a>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>Diagnostic Analysis Complete</h1>
+      <p style="color: var(--text-muted); margin: 0;">Machine Telemetry Processing Result</p>
     </div>
+
+    {% if prediction == 1 or prediction == "Failure" %}
+      <div class="result-box failure">
+        <h2>⚠️ High Risk of Machine Failure</h2>
+        <p>System parameters indicate critical operational strain. Immediate maintenance dispatch recommended.</p>
+      </div>
+    {% else %}
+      <div class="result-box normal">
+        <h2>✅ Machine Condition Normal</h2>
+        <p>Operational telemetry is within safe thresholds. No immediate maintenance required.</p>
+      </div>
+    {% endif %}
+
+    <a href="/" class="btn-back">← Run Another Prediction</a>
+  </div>
+
 </body>
 </html>
